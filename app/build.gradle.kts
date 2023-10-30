@@ -44,4 +44,5 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation ("com.squareup.picasso:picasso:2.5.2")
     implementation ("com.facebook.android:facebook-login:latest.release")
+    implementation("com.google.android.gms:play-services-maps:17.0.1")
 }
