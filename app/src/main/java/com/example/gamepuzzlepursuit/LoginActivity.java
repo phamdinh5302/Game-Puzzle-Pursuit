@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -55,7 +56,13 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         inputEmail = findViewById(R.id.inputEmail);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            inputEmail.setAutofillHints(View.AUTOFILL_HINT_USERNAME);
+        }
         inputPassword = findViewById(R.id.inputPassword);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            inputPassword.setAutofillHints(View.AUTOFILL_HINT_PASSWORD);
+        }
         tvSignup = findViewById(R.id.textViewSignUp);
 
         googleBtn = findViewById(R.id.btnGoogle);
@@ -78,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         //open mainactivity
-                        startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                         finish();
                     }
                     @Override
@@ -143,7 +150,8 @@ public class LoginActivity extends AppCompatActivity {
     private void checkCrendedentiatls(){
         String email = inputEmail.getText().toString();
         String password = inputPassword.getText().toString();
-        if(email.isEmpty() || !email.contains("@")){
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        if(email.isEmpty() || !email.matches(emailPattern)){
             showError(inputEmail,"Email không hợp lệ!");
         }
         else if(password.isEmpty() || password.length()<7){

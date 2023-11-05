@@ -34,21 +34,27 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this,googleSignInOptions);
         GoogleSignInAccount googleSignInAccount = GoogleSignIn.getLastSignedInAccount(this);
         //get details for signed in user
-        final String getFullName = googleSignInAccount.getDisplayName();
-        final  String getEmail = googleSignInAccount.getEmail();
+        if (googleSignInAccount != null) {
+            final String getFullName = googleSignInAccount.getDisplayName();
+            final  String getEmail = googleSignInAccount.getEmail();
 
-
-        email.setText("Email:" + getEmail);
-        fullname.setText("Full name:" + getFullName);
-        Picasso.with(this).load(googleSignInAccount.getPhotoUrl()).into(img);
+            email.setText("Email:" + getEmail);
+            fullname.setText("Full name:" + getFullName);
+            Picasso.with(this).load(googleSignInAccount.getPhotoUrl()).into(img);
+        }
         signOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //sign out
-                googleSignInClient.signOut();
-
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
-                finish();
+                if (googleSignInAccount != null) {
+                    googleSignInClient.signOut();
+                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                    finish();
+                }
+                else {
+                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                    finish();
+                }
             }
         });
     }
