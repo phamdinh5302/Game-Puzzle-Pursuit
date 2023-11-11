@@ -13,4 +13,13 @@
         android:id="@+id/map"
         tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <Button
+        android:id="@+id/btnquiz"
+        android:layout_width="113dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg"
+        android:text="câu đố"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="43dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
