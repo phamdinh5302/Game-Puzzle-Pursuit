@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/question"
         android:textStyle="bold"
-        android:text="This will be the question"
+        android:text="Đâu không phải ngôn ngữ lập trình"
         android:textColor="@color/black"
         android:textSize="24dp"
         android:textAlignment="center"
@@ -39,7 +39,7 @@
         android:id="@+id/ans_A"
         android:layout_margin="5dp"
         android:backgroundTint="@color/colorxam"
-        android:text="Ans A"
+        android:text="A. C++"
         android:textColor="@color/black"/>
 
     <Button
@@ -48,7 +48,7 @@
         android:id="@+id/ans_B"
         android:layout_margin="5dp"
         android:backgroundTint="@color/colorxam"
-        android:text="Ans B"
+        android:text="B. Java"
         android:textColor="@color/black"/>
 
     <Button
@@ -57,7 +57,7 @@
         android:id="@+id/ans_C"
         android:layout_margin="5dp"
         android:backgroundTint="@color/colorxam"
-        android:text="Ans C"
+        android:text="C. Html"
         android:textColor="@color/black"/>
     <Button
         android:layout_width="match_parent"
@@ -65,14 +65,14 @@
         android:id="@+id/ans_D"
         android:layout_margin="5dp"
         android:backgroundTint="@color/colorxam"
-        android:text="Ans D"
+        android:text="D. Python"
         android:textColor="@color/black"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/submit_btn"
-        android:text="Submit"
+        android:text="Trả lời"
         android:layout_marginTop="40dp"/>
 </LinearLayout>
 

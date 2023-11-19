@@ -126,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
         //check if user already signed in
         if (googleSignInAccount != null){
             //open mainactivity
-            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
             finish();
         }
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -173,6 +173,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
+                        finish();
                     }
                     else {
                         Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
@@ -199,7 +200,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String personId = account.getId();
                 final Uri personPhoto = account.getPhotoUrl();
                 //open mainactivity
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
                 finish();
 
         } catch (ApiException e) {
