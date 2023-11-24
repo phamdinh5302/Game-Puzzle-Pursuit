@@ -1,18 +1,24 @@
 {
   "project_info": {
     "project_number": "578117034010",
+    "firebase_url": "https://gamepuzzlepursuit-1a251-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "gamepuzzlepursuit-1a251",
     "storage_bucket": "gamepuzzlepursuit-1a251.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:578117034010:android:48e59debda91f3499af1a3",
+        "mobilesdk_app_id": "1:578117034010:android:527597790a1cb66f9af1a3",
         "android_client_info": {
-          "package_name": "com.example.gamepuzzlepursuit"
+          "package_name": "com.example.game_puzzle_pursuit"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "578117034010-9e2m1jg25n9i1jvo7enkq2c8v2uhgfba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCoBobfUwrq0qFiTMRV2c6S58EuKbd0PZ4"
@@ -20,7 +26,41 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578117034010-9e2m1jg25n9i1jvo7enkq2c8v2uhgfba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578117034010:android:48e59debda91f3499af1a3",
+        "android_client_info": {
+          "package_name": "com.example.gamepuzzlepursuit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578117034010-9e2m1jg25n9i1jvo7enkq2c8v2uhgfba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoBobfUwrq0qFiTMRV2c6S58EuKbd0PZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578117034010-9e2m1jg25n9i1jvo7enkq2c8v2uhgfba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
